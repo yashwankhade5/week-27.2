@@ -20,5 +20,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
-          push: true
-          tags: yash180/week27:${{github.sha}}
+        context: ./
+        file: ./docker/Dockerfile.backend
+        push: true
+        tags: yash180/week27:${{github.sha}}
