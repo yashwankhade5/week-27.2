@@ -33,7 +33,7 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             sudo su
-            docker run -d -p 8080:8080 yash180/week27:${{github.sha}}
+            sudo docker run -d -p 8080:8080 yash180/week27:${{github.sha}}
             
             
 
