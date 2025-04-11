@@ -34,6 +34,5 @@ jobs:
           script: |
             sudo su
             
-            docker run -p 8080:8080 yash180/week27:${{ github.sha}}
             
 
