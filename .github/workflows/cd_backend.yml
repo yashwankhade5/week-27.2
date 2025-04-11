@@ -32,7 +32,7 @@ jobs:
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
           script: |
-            docker stop week27
+            
             docker run -p 8080:8080 yash180/week27:${{ github.sha}}
             
 
