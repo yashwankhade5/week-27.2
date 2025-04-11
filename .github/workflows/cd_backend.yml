@@ -24,3 +24,15 @@ jobs:
           push: true
           tags: yash180/week27:${{github.sha}}
 
+      - name: multiple command
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          port: ${{ secrets.PORT }}
+          script: |
+            docker stop week27
+            docker run -p 8080:8080 yash180/week27:${{ github.sha}}
+            
+
