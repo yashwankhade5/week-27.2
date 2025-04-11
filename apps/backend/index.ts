@@ -30,7 +30,7 @@ app.post("/user", (req, res) => {
     }
   })
     .then(user => {
-      res.status(201).json(user);
+      res.status(202).json(user);
     })
     .catch(err => {
       res.status(400).json({ error: err.message });
